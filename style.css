@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
 
+/* definir cores e fontes da página com variáveis */
 :root{
     --cor-principal: #0B192C;
     --cor-secundaria: #E2E2B6;
@@ -11,6 +12,7 @@
     --fonte-secudaria: "Montserrat", serif;
 }
 
+/* Serve para zerar e podermos ter controle total da estilização */
 * {
     margin: 0;
     padding: 0;
@@ -27,10 +29,12 @@ body{
 }
 
 .apresentacao{
-    padding: 8.5% 20%;
+/* ajustar view da página */
+    padding: 2.5% 20%;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    gap: 82px;
 }
 
 .cabecalho{
@@ -43,7 +47,7 @@ body{
 }
 
 .cabecalho__menu__link{
-    font-size: 20px;
+    font-size: 1.25rem;
     font-family: var(--fonte-secudaria);
     font-weight: 600;
     color: var(--cor-terciaria);
@@ -51,8 +55,7 @@ body{
 }
 
 .apresentacao__conteudo{
-    width: 615px;
-    height: 482px;
+    width: 50%;
     align-content:center;
     display: flex;
     flex-direction: column;
@@ -60,18 +63,18 @@ body{
     gap: 35px;
 }
 
-.foto__minha{
-    width: 400px;
+.apresentacao__imagem{
+    width: 50%;
     border-radius: 20px;
 }
 
 .apresentacao__conteudo__titulo{
-    font-size: 36px;
+    font-size: 2.25rem;
     font-family: var(--fonte-primaria);
 }
 
 .apresentacao__conteudo__texto{
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: var(--fonte-secudaria);
     font-weight: 400;
 }
@@ -84,11 +87,11 @@ body{
     gap: 32px;
 }
 
-.apresentacao__links__link{
-    width: 150px;
+.apresentacao__links__navegacao{
+    width: 50%;
     text-align: center;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 1rem;
     padding: 15px 45px;
     text-decoration: none;
     color: var(--cor-principal);
@@ -105,10 +108,10 @@ body{
 .apresentacao__links__subtitulo{
     font-family: var(--fonte-primaria);
     font-weight: 100px;
-    font-size: 19px;
+    font-size: 1.18rem;
 }
 
-.apresentacao__links__link:hover{
+.apresentacao__links__navegacao:hover{
     background-color: var(--cor-rover);
 }
 
@@ -118,6 +121,25 @@ body{
     padding: 18px;
     text-align: center;
     font-family: var(--fonte-secudaria);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 400;
+}
+
+/* melhorar a responsividade em dispositivos com telas diferentes */
+@media (max-width: 1200px){
+    .cabecalho{
+        padding: 5% 0 0 0;
+    }
+
+    .cabecalho__menu{
+        justify-content: center;
+    }
+
+    .apresentacao{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .apresentacao__conteudo{
+        width: auto;
+    }
 }
