@@ -10,4 +10,5 @@ Olá, Bem-vindo ao projeto da minha página de portfólio.
 
 ## Feito por:
 Gerson Cruz
+
 Linkedin: https://www.linkedin.com/in/gerson-cruz-dev/
